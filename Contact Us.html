@@ -1,0 +1,132 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/main.css"> <!-- Link to your CSS file -->
+    
+</head>
+<body>
+    <header>
+        <a href="home.html"><img src="Image/shopping.webp" height="100px" width="100px" alt="logo"></a>
+        <h2 class="header">Fashion Boutique</h2>
+    </header>
+    <nav style="padding-top: 5px;" id="nav_menu">
+        <ul>
+            <li><a href="home.html">Home</a></li> 
+            <li><a href="About Us.html">About Us</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Contacts.html">Contact</a></li>
+            <li><a href="Contact Us.html">Contact Us</a></li>               
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h1>Contact Us</h1>
+            <p>Get in touch with us using the contact form below or through our social media profiles.</p>
+            <form id="contactForm" action="mailto:infofashionbotique.co.za" method="post" class="form" onsubmit="return validateForm()">
+                <div id="div">
+                    <label for="name" class="label">Name:</label>
+                    <input type="text" id="name" name="name" class="input" placeholder="Enter your name">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label for="email" class="label">Email:</label>
+                    <input type="email" id="email" name="email" class="input" placeholder="Enter your email">
+                </div>
+                <div id="div">
+                    <label for="message" class="label">Message:</label>
+                    <textarea id="message" name="message" rows="5" class="input" placeholder="Write your message here"></textarea>
+                </div>
+                <!-- Changed to button element for submit action -->
+                <button type="submit" class="submit">Send</button>
+            </form>
+            <h1>Our operating hours:</h1>
+            <ul>
+                <li>Monday-Friday: 9am to 5pm</li>
+                <li>Saturday-Sunday: Delivery only</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Fashion Boutique. All Rights Reserved.</p>
+    </footer>
+    <!-- Back to Top button -->
+    <button id="backToTop" onclick="scrollToTop()">Back to Top</button>
+
+    <!-- JavaScript for "Back to Top" functionality -->
+    <script>
+        // Show the "Back to Top" button when the user scrolls down
+        window.onscroll = function() {
+            const backToTopButton = document.getElementById("backToTop");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // Smoothly scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+    <!-- Custom Alert for Form Validation -->
+    <div class="overlay" id="overlay"></div>
+    <div class="custom-alert" id="customAlert">
+        <p id="alertMessage">This is an alert message.</p>
+        <button onclick="closeCustomAlert()">OK</button>
+    </div>
+
+    <!-- JavaScript for form validation -->
+    <script>
+        function showCustomAlert(message) {
+            document.getElementById('alertMessage').textContent = message;
+            document.getElementById('customAlert').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closeCustomAlert() {
+            document.getElementById('customAlert').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        function validateForm() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // Validate Name
+            if (name === '') {
+                showCustomAlert("Name is required. Please enter your name.");
+                document.getElementById('name').focus();
+                return false;
+            }
+
+            if (!/^[a-zA-Z\s]+$/.test(name)) {
+                showCustomAlert("Name should only contain letters and spaces.");
+                document.getElementById('name').focus();
+                return false;
+            }
+
+            // Validate Email
+            if (email === '') {
+                showCustomAlert("Email is required. Please enter your email.");
+                document.getElementById('email').focus();
+                return false;
+            }
+
+            // Validate Message
+            if (message === '') {
+                showCustomAlert("Message is required. Please enter your message.");
+                document.getElementById('message').focus();
+                return false;
+            }
+
+            // If all validations pass
+            return true;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="css/main.css"> <!-- Link to your CSS file -->
+</head>
+<header>
+    <a href="home.html"><img src="Image/shopping.webp" height="100px" width="100px" alt="log"> </a>
+     <h2 class="header">Fashion Botique</h2>
+ </header>
+     <nav style="padding-top: 5px;" id="nav_menu">
+         <ul>
+         <li><a href="home.html">home</a> </li> 
+         <li><a href="About Us.html">About Us </a></li>
+         <li><a href="Services.html">Services </a></li>
+         <li><a href="Contacts.html" >Contact </a> </li>
+         <li><a href="Contact Us.html">Contact Us</a></li>               
+         </ul>
+     </nav>
+     <main>
+    <div style>
+    <h1>Contacts Information</h1>
+    <ul>
+        <li><strong> Address:</strong>South Africa, Gauteng, Waterfall Sunbird Street MIdrand</li>
+        <li><strong>Phone:</strong><a href="Contacts.html">0799972800</a></li>
+        <li><strong>Email</strong><a href="mailto:infofashionbotique.co.za">infofashionbotique.co.za|maredithobejane@15gmail.com</a></li>
+    </ul>
+     <h1>Our Map Location</h1>
+    </div>
+     <div class="map" style="margin: auto 0; padding-bottom: 20px;">
+        <!-- Embed Google Maps using an iframe -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.470161982626!2d-122.41969348464116!3d37.77668397975323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c3bf09fb9%3A0x9c3668f8560716c6!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1633598192877!5m2!1sen!2sus" 
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Our Company. All Rights Reserved.</p>
+        
+    </footer>
+    <!-- Back to Top button -->
+    <button id="backToTop" onclick="scrollToTop()">Back to Top</button>
+
+    <!-- JavaScript for "Back to Top" functionality -->
+    <script>
+        // Show the "Back to Top" button when the user scrolls down
+        window.onscroll = function() {
+            const backToTopButton = document.getElementById("backToTop");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // Smoothly scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
+           

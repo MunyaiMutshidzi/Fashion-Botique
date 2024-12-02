@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Boutique - Services</title>
+    <link rel="stylesheet" href="css/main.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <a href="home.html"><img src="Image/shopping.webp" height="100px" width="100px" alt="logo"></a>
+        <h2 class="header">Fashion Boutique</h2>
+    </header>
+    <nav style="padding-top: 5px;" id="nav_menu">
+        <ul>
+            <li><a href="home.html">Home</a></li> 
+            <li><a href="About Us.html">About Us</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Contacts.html">Contact</a></li>
+            <li><a href="Contact Us.html">Contact Us</a></li>               
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h1>Custom Tailoring and Alterations</h1>
+            <p>Boutiques often provide bespoke tailoring services, allowing customers to have garments made specifically to their measurements. This includes:</p>
+            <ul>
+                <li>Bespoke Services: Custom-made clothing designed from scratch based on individual specifications.</li>
+                <li>Made-to-Measure: Garments created using a pre-existing pattern but tailored to fit the customer’s measurements without a prototype fitting.</li>
+                <li>Alteration Services: Adjustments made to existing garments to improve fit and style.</li>
+            </ul>
+
+            <h1>Prototype Development</h1>
+            <p>Many boutiques assist designers by creating prototypes based on sketches or design concepts. This service can include:</p>
+            <ul>
+                <li>Making adjustments based on client feedback.</li>
+                <li>Developing initial samples for review.</li>
+            </ul>
+
+            <h1>Sourcing Fabrics and Materials</h1>
+            <p>Fashion boutiques often help clients find high-quality fabrics and materials needed for garment production. This may involve:</p>
+            <ul>
+                <li>Sourcing new fabrics and trims.</li>
+                <li>Negotiating prices and minimum order quantities with suppliers.</li>
+            </ul>
+
+            <h1>Design Consultation Services</h1>
+            <p>Boutiques frequently offer consulting services for individuals or brands looking to develop their fashion lines, including:</p>
+            <ul>
+                <li>Trend analysis and mood board creation.</li>
+                <li>Assistance with color palettes and textile design.</li>
+            </ul>
+
+            <h1>Merchandising and Display Services</h1>
+            <p>Effective merchandising is crucial for retail success; thus, boutiques may provide:</p>
+            <ul>
+                <li>Guidance on product placement within the store.</li>
+                <li>Creating visually appealing displays that attract customers.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Fashion Boutique. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Back to Top button -->
+    <button id="backToTop" onclick="scrollToTop()">Back to Top</button>
+
+    <!-- JavaScript for "Back to Top" functionality -->
+    <script>
+        // Show the "Back to Top" button when the user scrolls down
+        window.onscroll = function() {
+            const backToTopButton = document.getElementById("backToTop");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // Smoothly scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

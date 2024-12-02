@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Boutique</title>
+    <link rel="stylesheet" href="css/main.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+       <a href="home.html"><img src="Image/shopping.webp" height="100px" width="100px" alt="logo"></a>
+        <h2 class="header">Fashion Boutique</h2>
+    </header>
+    <nav style="padding-top: 5px;" id="nav_menu">
+        <ul>
+            <li><a href="home.html">Home</a></li> 
+            <li><a href="About Us.html">About Us</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Contacts.html">Contact</a></li>
+            <li><a href="Contact Us.html">Contact Us</a></li>               
+        </ul>
+    </nav>
+    <main>
+        <h1>Fashion Boutique</h1>
+        <section>
+            <h2 style="color: #a10b5e;">Welcome to Our Fashion Boutique</h2>
+            <p>We are dedicated to providing the best services to our clients.</p>
+        </section>
+        <p>
+            At our boutique, we celebrate the art of style for both men and women, offering a curated selection of the latest trends and timeless classics.
+            From tailored suits and chic dresses to casual wear and accessories, our collection is designed to empower individuals to express their unique personalities through fashion.
+            With an emphasis on quality craftsmanship and sustainable practices, we invite you to explore our diverse range of clothing that caters to every occasion, ensuring you look and feel your best.
+        </p>
+        <h3>Life's Too Short for Boring Clothes!!!</h3>
+    </main>
+    <footer>
+        <div class="newsletter">
+            <h2>Subscribe to our Newsletter</h2>
+            <!-- Embedded Google Form -->
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe59hM100VmfMDJis6RhhGH8txU1q-l7-mzcPJY9k4eXxYhDw/viewform?embedded=true" width="640" height="740" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+        <p>&copy; 2024 Fashion Boutique. All Rights Reserved.</p>
+    </footer>
+    <!-- Back to Top button -->
+    <button id="backToTop" onclick="scrollToTop()">Back to Top</button>
+
+    <!-- JavaScript for "Back to Top" functionality -->
+    <script>
+        // Show the "Back to Top" button when the user scrolls down
+        window.onscroll = function() {
+            const backToTopButton = document.getElementById("backToTop");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // Smoothly scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
